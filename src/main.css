@@ -1,0 +1,484 @@
+.navbar{
+    position: fixed;
+    z-index: 5;
+    height: 10%;
+    background-color: rgb(212, 205, 205);
+    box-shadow:  0px 0px 0px 5px rgba(131, 129, 129, 0.25);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+}
+
+.navbar .menu-link {
+    position: relative;
+    display: inline;
+    justify-content: space-around;
+}
+
+.navbar .menu-link ul{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 40%;
+}
+
+.navbar .menu-link ul li{
+    list-style: none;
+    margin-left: 40px;   
+}
+
+.navbar .menu-link ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar .menu-link ul li a:hover{
+    color: rgb(0, 136, 255);
+ }
+
+ .navbar .menu-link ul li a:active{
+    font: italic;
+ }
+
+.navbar .logo{
+    display: flex;
+    height: 35px;
+    width: 35px;
+    justify-content: start;
+    padding-left: 7rem;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+@media(min-width :892px){
+
+
+
+    .navbar .mobile{
+        visibility: hidden;
+      }
+
+    .verticalmenu{
+        visibility: hidden;
+    }
+     
+ }
+
+
+
+
+ @media(max-width :892px){
+  .menu-link ul li{
+      opacity: 0;
+      pointer-events: none;
+  }
+
+  .logo{
+    padding-left: 3rem;
+  }
+  
+  
+  .mobile{
+        
+    position: inherit;
+    right: 45px;
+    top: 15px;
+   font-size: 30px;
+    background-color:  rgba(179, 172, 172, 0);;
+    border: none;
+}
+
+
+  .verticalmenu ul{
+    font-weight: bold;
+    position: fixed;
+    left: 60%;
+    right: 0;
+    background-color:rgb(212, 205, 205);
+    top: 7%;
+    height: 100%;
+    width: 30%;
+    font-family:Arial, Helvetica, sans-serif;
+    list-style: none;
+   }
+
+   .verticalmenu ul li{
+    display:grid;
+    justify-content: start;
+    line-height: 40px;
+
+   }
+
+   .verticalmenu ul li a{
+    color: black;
+    text-decoration: none;
+   }
+
+   .verticalmenu ul li a:hover{
+    color: rgb(0, 136, 255);
+ }
+
+   .verticalmenu ul li a:active{
+    font: italic;
+ }
+}
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#home{
+    height: 600px;
+    margin-top: 100px;
+    
+}
+
+#home .intro{
+    display: flex;
+    justify-content: right;
+}
+
+
+#home .intro .mainpic{
+   
+    position: relative;
+    display: flex ;
+    justify-content: right;
+    
+    
+}
+
+
+
+
+#home .introduction{
+    max-width: fit-content;
+}
+
+
+#home .name1{
+    
+    position: absolute;
+    top: 250px;
+    left: 25%;
+    z-index: 1;
+    overflow: hidden;
+    width: 0;
+    font-size: 40px;
+    font-family: 'Gill Sans';
+    border-right: 0.1em solid lightcoral; /* The typwriter cursor */
+    white-space: nowrap; 
+    margin: 0 auto; 
+    animation: 
+    typing 12s steps(40, end),
+    blink-caret .75s step-end infinite;
+    /*animation-timing-function: steps(30);*/
+    animation-fill-mode: forwards;
+   
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+ @keyframes blink-caret {
+    from, to { border-color: transparent  }
+    50% { border-color: lightcoral; }
+  }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap');
+#home .name2{
+    
+    position:absolute;
+    top: 280px;
+    z-index: 1;
+    font-weight: lighter;
+    font-size: 28px;
+    font-family: Roboto Condensed;
+    left: 25%;  
+
+}
+
+
+
+
+
+#about-me{
+    position: relative;
+    height: 800px;
+}
+
+
+#about-me .about-me1{
+    position: absolute;
+    max-width: fit-content;
+    white-space: nowrap;
+    font-weight: bolder;
+    text-align: right;
+    right: 43%;
+    top: 100px;
+
+}
+#about-me .profile-picture{
+    position: absolute;
+    top: 100px;
+    right: 50%;
+    height: 200px;
+    width: 180px;
+   transform: translate(50%, 50%);
+   box-shadow: 0 0 0 9px rgba(255, 255, 255/30%);
+    animation: profile__animate 8s ease-in-out infinite 1s;
+
+}
+
+#about-me .about-me2{
+    position: absolute;
+    top: 450px;
+    font-family: Roboto Condensed;
+    text-align: center;
+}
+
+
+@keyframes profile__animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+
+
+
+
+
+
+
+#skills{
+    position: relative;  
+    display: grid;
+    align-items: center;
+    height: 500px;
+}
+
+
+
+
+
+#skills .skillheadset{
+    margin-top: 400px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    text-align: center;
+}
+
+.skill-heads{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.skill-set{
+  
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+
+#works{
+    position: relative;
+    display: flex;
+    left: 0;
+    justify-content: space-between;
+    height: 700px;
+}   
+    
+#works .work{
+    position: absolute;
+    font-family: Inter;
+    top: 50px;
+    left: 46%;
+    font-weight: bolder;
+
+}
+
+#works .work1{
+    position: absolute;
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+    top: 100px;
+    
+    
+}
+
+#works .work1 ul{
+    display: flex;
+    justify-content: space-around;
+    left: 30%;
+
+   
+}
+#works .work1 li{
+    list-style: none;
+    text-align: center;
+    justify-content:center;
+    padding: 10px;
+   
+   
+}
+#works .work1 li a{
+    position: relative;
+    color: white;
+    justify-content: space-between;
+    padding: 10px;
+    text-decoration: none;
+    height: 7px;
+    background-color: black;
+   border-radius: 5px;
+   width: 100px;
+}
+#works .proj1{
+    padding-left: 20px;
+}
+#works #projects {
+    position: absolute;
+    justify-content: space-around;
+    top: 170px;
+
+}
+
+#works #projects li{
+    padding: 7px;
+    padding-left: 20px;
+}
+
+#works #ui-ux{
+   position: absolute;
+   display: flex;
+   top: 450px;
+}
+
+#works .uiux{
+    position: absolute;
+    padding-left: 20px;
+    top: 70px;
+ }
+
+ .uiuxx{
+    position: relative;
+    display: flex;
+    top: 100px;
+    padding-left: 20px;
+ }
+ 
+ #certifications{
+    position: relative;
+   display: flex;
+   padding: 2rem;
+   height: 400px;
+  
+}
+
+#certifications .cert{
+    position: absolute;
+    font-family: Inter;
+    top: 50px;
+    left: 46%;
+    font-weight: bolder;
+
+}
+
+#certifications .cert1 {
+    position: absolute;
+    display:grid;
+    justify-content: space-around;
+    text-align: center;
+    top: 120px;
+    left: 15%;
+    
+}
+
+#certifications .cert1 li{
+    list-style: none;
+}
+
+#certifications .cert1 li a{
+    line-height: 2;
+    text-decoration: none;
+    color:rgb(0, 0, 0)
+}
+
+
+#contact{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 80px;
+}
+#contact .foot1{
+    position: absolute;
+    color: rgba(128, 128, 128, 0.71);
+    left: 0;
+}
+ .foot2 a{
+    position: absolute;
+    text-decoration: none;
+    color: rgba(128, 128, 128, 0.71);
+    right: 0;
+}
+
+.cont1 {
+    position: absolute;
+    left: 50%;
+    padding: 0;
+    justify-content: space-around;
+}
+.cont2{
+    position: absolute;
+    left: 50%;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+
+
+
+
